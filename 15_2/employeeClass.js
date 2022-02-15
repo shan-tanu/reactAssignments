@@ -21,8 +21,7 @@
 // }
 // export default Employee;
 class a {
-    constructor(props) {
-        super(props);
+    constructor() {
         this.alist = ["a", "b", "c"];
     }
 

@@ -7,6 +7,31 @@
     <title>Employee</title>
   </head>
   <body>
+    <h3>To Add New Employee, fill details and submit.</h3>
+    <div>
+      <label for="name">Employee Name:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="age">Age:</label><br />
+      <input type="number" id="age" name="age" /><br /><br />
+      <label for="desgn">Designation:</label><br />
+      <input type="text" id="desgn" name="desgn" /><br /><br />
+      <input type="submit" value="Add Employee" onclick="sendToAdd()" />
+    </div>
+
+    <script>
+      function sendToAdd() {
+        EMP.addEmployee(
+          document.getElementById("name").value,
+          document.getElementById("age").value,
+          document.getElementById("desgn").value
+        );
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("desgn").value = "";
+      }
+    </script>
+
+    <br /><br /><br />
     <h3>To get details of employee. Click the button.</h3>
     <script src="./employee.js"></script>
     <div class="simple">
@@ -16,49 +41,6 @@
       </div>
 
       <p id="result"></p>
-    </div>
-
-    <script type="text/javascript" src="testEmpClass.js"></script>
-    <div class="complex">
-      <table width="200" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <label for="name">Employee Name:</label>
-          <input type="text" id="name" name="name" />
-        </tr>
-        <tr>
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age" />
-        </tr>
-        <tr>
-          <label for="address">Address:</label>
-          <input type="text" id="address" name="address" />
-        </tr>
-        <tr>
-          <label for="phone">Phone:</label>
-          <input type="text" id="phone" name="phone" />
-        </tr>
-        <tr>
-          <label for="designation">Designation:</label>
-          <input type="text" id="designation" name="designation" />
-        </tr>
-      </table>
-      <input
-        class="button"
-        name="submit"
-        type="submit"
-        value="Add Employee"
-        onclick="addEmployee()"
-      />
-    </div>
-
-    <div>
-      <div>
-        <button onclick="getPersonalList()">All Personal Details</button>
-        <button onclick="getOfficialList()">All Official Details</button>
-        <button onclick="clearDetailsOff()">Clear</button>
-      </div>
-
-      <p id="result1"></p>
     </div>
   </body>
 </html>
