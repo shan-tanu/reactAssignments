@@ -9,11 +9,56 @@
   <body>
     <h3>To get details of employee. Click the button.</h3>
     <script src="./employee.js"></script>
-    <div>
-      <button onclick="EMP.getEmployee()">Get Details</button>
-      <button onclick="EMP.clearDetails()">Clear</button>
+    <div class="simple">
+      <div>
+        <button onclick="EMP.getEmployee()">Get Details</button>
+        <button onclick="EMP.clearDetails()">Clear</button>
+      </div>
+
+      <p id="result"></p>
     </div>
 
-    <p id="result"></p>
+    <script type="text/javascript" src="testEmpClass.js"></script>
+    <div class="complex">
+      <table width="200" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <label for="name">Employee Name:</label>
+          <input type="text" id="name" name="name" />
+        </tr>
+        <tr>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" />
+        </tr>
+        <tr>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" />
+        </tr>
+        <tr>
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" />
+        </tr>
+        <tr>
+          <label for="designation">Designation:</label>
+          <input type="text" id="designation" name="designation" />
+        </tr>
+      </table>
+      <input
+        class="button"
+        name="submit"
+        type="submit"
+        value="Add Employee"
+        onclick="addEmployee()"
+      />
+    </div>
+
+    <div>
+      <div>
+        <button onclick="getPersonalList()">All Personal Details</button>
+        <button onclick="getOfficialList()">All Official Details</button>
+        <button onclick="clearDetailsOff()">Clear</button>
+      </div>
+
+      <p id="result1"></p>
+    </div>
   </body>
 </html>
