@@ -31,7 +31,7 @@ function employeeModule() {
     }
 };
 
-var emp1 = new employeeModule;
+var emp1 = new employeeModule();
 emp1.addEmployee("Aman",25,"Delhi, India","trainee",2000);
 var result = emp1.detailEmployee();
 console.log(result);
