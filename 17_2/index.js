@@ -25,3 +25,27 @@ setInterval(() => {
     var randomValue = Math.floor((Math.random()*10)+1);
     inputValueSetter(randomValue);
 }, 10000);
+
+
+
+///After learning from the class.
+sample = {}
+
+Object.defineProperty(sample,"inputVal",{
+    get: function(){
+        return value;
+    },
+    set: function(inp){
+        value = inp;
+        document.getElementById("change").value = inp;
+        document.getElementById("disps").innerHTML = inp;
+    }
+});
+
+setInterval(() => {
+    sample.inputVal = Math.floor(Math.random()*11);
+}, 10000);
+
+function update(event){
+    sample.inputVal = event.target.value;
+}
