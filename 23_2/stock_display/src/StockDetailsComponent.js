@@ -9,7 +9,7 @@ export default function StockDetailsComponent(props) {
             borderRadius: "10px",
             boxShadow: "10px 5px 5px gray",
             // display: "inline-block",
-        }
+        } 
     };
 
     return (
@@ -20,7 +20,7 @@ export default function StockDetailsComponent(props) {
                     <h2 className="card-text">{props.data.SC_FULLNM}</h2>
                     <p className="card-text">Market Cap : {props.data.MKTCAP}</p>
                     <table className="card-text">
-                        <thead>
+                        <thead> 
                             <tr>
                                 <th>Previous Close&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                 <th>Opening Price</th>
