@@ -26,7 +26,7 @@ export default function ProductDetailsComponent(props) {
                         <h4>The price of each : {props.price}</h4>
                     </div><br/>
                     <input type="button" className="btn btn-primary" value="Delete" onClick={deleteChild}/>
-                    <input type="button" id={props.pid} className="btn btn-primary" value="Update" onClick={props.updateProduct}/>
+                    <input type="button" id={props.pid} className="btn btn-primary" value="Update" onClick={props.updateProduct} style={{marginLeft:"20px"}}/>
                 </div>
             </div>
         </div> 

@@ -67,8 +67,13 @@ export default class ProductListComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Product List is given Below:</h1>
+            <>
+            <div style={{display:"flex", justifyContent:"left", position:"relative"}}>
+            <h3 style={{color:"white"}}>For Adding New Products</h3>
+            <input type="button" style={{position:"absolute", right:"0"}} className="btn btn-outline-light" onClick={()=>this.props.history.push("/add")} value="Add Product"/>
+            <br/><br/><br/>
+            </div>
+                <h3 style={{color:"white"}}>The Product List is as shown :</h3>
                 {this.state.productList.map((product) => {
                     return <ProductDetailsComponent key={product.pid} {...product} deleteProduct={this.deleteProduct} updateProduct={this.updateProduct}></ProductDetailsComponent>
                 })}
@@ -118,7 +123,7 @@ export default class ProductListComponent extends React.Component {
                     </fieldset>
                 </form> */}
 
-            </div>
+            </>
         )
     }
 }
