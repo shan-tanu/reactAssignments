@@ -15,6 +15,7 @@ import StockComponent from './stockAPI/StockComponent';
 import UseStateCounter from './hooksImplementation/UseStateCounter';
 import ProductDetailsComponent from './productHooks/ProductDetailsComponent';
 import GrandGrandParent from './hierarchy/GrandGrandParent';
+import MainComponent from './SPA/MainComponent';
 // import reportWebVitals from './reportWebVitals';
 
 const example = [1, 2, 3];
@@ -60,8 +61,9 @@ ReactDOM.render(
     {/* <ProductListComponent/> */}
     {/* <StockComponent/> */}
     {/* <UseStateCounter/> */}
-    <ProductListComponent/> {/*useState */}
+    {/* <ProductListComponent/> useState */}
     {/* <GrandGrandParent/> */}
+    <MainComponent/>
 
   </React.StrictMode>,
   document.getElementById('root')

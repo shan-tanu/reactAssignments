@@ -99,6 +99,15 @@ export default function ProductListComponent() {
         setPrice("");
     }
 
+    // function higherOrderComponent(InputComponent){
+    //     class HOC extends React.Component {
+    //       render() {
+    //         return <InputComponent />
+    //       }
+    //     }
+    //     return HOC
+    //   }
+
 
     return (
         <div>
@@ -107,7 +116,7 @@ export default function ProductListComponent() {
                 return <ProductDetailsComponent key={product.pid} {...product} delete={deleteProduct} fetchUpdate={fetchUpdate}></ProductDetailsComponent>
             })}
 
-            <form className="form-horizontal" style={{ padding: "20px", margin: "14px 30px" }}>
+            {/* <form className="form-horizontal" style={{ padding: "20px", margin: "14px 30px" }}>
                 <fieldset>
 
                     <h3>Add Product Functionality</h3>
@@ -156,7 +165,7 @@ export default function ProductListComponent() {
                     </div>
 
                 </fieldset>
-            </form>
+            </form> */}
         </div>
     )
 }
