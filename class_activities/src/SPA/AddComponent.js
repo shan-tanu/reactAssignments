@@ -14,37 +14,20 @@ export default class UpdateComponent extends React.Component {
     }
 
 
-    componentDidMount = () => {
+    addProduct = () => {
         //debugger;
-        var id = this.props.match.params.userId;
-        var url = "https://localhost:5001/api/Product/" + id;
-        var getPromise = Axios.get(url);
-        getPromise.then((response) => {
-        //debugger;    
-        this.setState({
-                pid: response.data.pid,
-                pname: response.data.pname,
-                qty: response.data.qty,
-                price: response.data.price
-            })
-        })
-    }
-
-
-
-    updateProduct = () => {
-        //debugger;
-        var putData = {
+        var postData = {
             pid: this.state.pid,
             pname: this.state.pname,
             qty: this.state.qty,
             price: this.state.price
         };
 
-        var url = "https://localhost:5001/api/Product/" + this.state.pid;
-        var putPromise = Axios.put(url, putData);
-        putPromise.then((response) => {
-            console.log("updated product");
+        var url = "https://localhost:5001/api/Product";
+
+        var postPromise = Axios.post(url, postData);
+        postPromise.then((response) => {
+            console.log("added new product");
             //getProducts();
         }, (reject) => {
             console.log("fail");
@@ -59,7 +42,7 @@ export default class UpdateComponent extends React.Component {
             <form  className="form-horizontal" style={{ padding: "20px", margin: "14px 30px" }}>
             <fieldset>
 
-                <h3>Update Product Functionality</h3>
+                <h3>Add New Product Functionality</h3>
 
                 <div className="form-group">
                     <label className="col-md-4 control-label" htmlFor="pid">Product ID</label>
@@ -94,7 +77,7 @@ export default class UpdateComponent extends React.Component {
                 <div className="form-group">
                     <label className="col-md-4 control-label" htmlFor=""></label>
                     <div className="col-md-4">
-                        <button id="" name="" className="btn btn-primary" onClick={this.updateProduct}>Update Product</button>
+                        <button id="" name="" className="btn btn-primary" onClick={this.addProduct}>Add Product</button>
                     </div>
                 </div>
 
